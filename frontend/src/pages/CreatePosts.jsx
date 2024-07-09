@@ -1,6 +1,6 @@
 import React, { useState,useContext, useEffect } from 'react'
 import ReactQuill from 'react-quill'
-import 'react-quill/dist/quill.snow.css'
+import 'react-quill/dist/quill.snow.css';
 import {UserContext} from "../context/userContext"
 import {useNavigate} from "react-router-dom"
 import axios from 'axios'
