@@ -534,7 +534,7 @@ resize: none;
 
 .loader{
   position: fixed;
-  top: 0;
+  top: 0px;
   left: 0;
   height: 100vh;
   width: 100vw;
@@ -544,7 +544,7 @@ resize: none;
 }
 
 .loader__image{
-  width: 4.5rem;
+  width: 35rem;
   aspect-ratio:1/1 ;
 }
 
