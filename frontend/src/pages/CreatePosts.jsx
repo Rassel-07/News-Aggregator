@@ -7,7 +7,7 @@ import axios from 'axios'
 
 export default function CreatePosts () {
   const [title, setTitle] = useState('')
-  const [category, setCategory] = useState('Uncategorized')
+  const [category, setCategory] = useState('')
   const [description, setDescription] = useState('')
   const [thumbnail, setThumbnail] = useState('')
   const [error, setError] = useState('')
@@ -72,6 +72,7 @@ export default function CreatePosts () {
         <form className="form create-post__form" onSubmit={createPost}>
           <input type="text" placeholder='Title' value={title} onChange={event => setTitle(event.target.value)} autoFocus />
           <select name="category" value={category} onChange={event => setCategory(event.target.value)}>
+            <option value="" disabled selected>Choose a Category</option>
             {
               POST_CATEGORIES.map(cat => <option key={cat}>{cat}</option>)
             }

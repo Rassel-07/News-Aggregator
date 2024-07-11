@@ -6,6 +6,7 @@ export default function Loader(){
         <div className="loader">
             <div className="loader__image">
                 <img src={LoadingGif} alt="" />
+                
             </div>
         </div>
     )

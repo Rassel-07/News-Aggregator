@@ -3,7 +3,6 @@ const jwt = require("jsonwebtoken")
 const fs = require('fs')
 const path = require('path')
 const uuid = require('uuid').v4;
-
 const User = require('../models/userModel')
 const HttpError = require('../models/errorModel')
 
@@ -191,31 +190,10 @@ const editUser = async (req, res, next) => {
     }
 }
 
-
-
-
-
-/////////////// Get Authors
-//POST: api/users/authors
-//UNPROTECTED
-const getAuthors = async (req, res, next) => {
-    try {
-        const authors = await User.find().select('-password');
-        res.json(authors);
-    } catch (error) {
-        return next(new HttpError(error.message))
-    }
-}
-
-
-
-
-
 module.exports = {
     registerUser,
     loginUser,
     getUser,
     changeAvatar,
     editUser,
-    getAuthors
 }
