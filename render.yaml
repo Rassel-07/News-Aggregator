@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: news-aggregator-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5001
+      - key: JWT_SECRET
+        generateValue: true
+      - key: FRONTEND_URL
+        sync: false
