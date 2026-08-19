@@ -1,0 +1,15 @@
+node_modules/
+.env
+dist/
+build/
+.DS_Store
+
+# Local persistent data store (contains user accounts & article cache)
+backend/data/store.json
+
+# Uploaded files (legacy, now purged)
+backend/uploads/
+
+# Frontend build
+frontend/build/
+frontend/dist/
